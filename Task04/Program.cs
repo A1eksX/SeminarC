@@ -14,8 +14,9 @@ int secondNumber = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите третье целое число ");
 int thirdNumber = Convert.ToInt32(Console.ReadLine());
 
-if (firstNumber > secondNumber && firstNumber > thirdNumber) Console.Write($"Максимальное число {firstNumber}");
+int max = firstNumber;
 
-else if (secondNumber > firstNumber && secondNumber > thirdNumber) Console.Write($"Максимальное число {secondNumber}");
+if (secondNumber > max) max = secondNumber;
+else if (thirdNumber > max) max = thirdNumber;
 
-else if (thirdNumber > firstNumber && thirdNumber > secondNumber) Console.Write($"Максимальное число {thirdNumber}");
+Console.Write($"Максимальное число {max}");
