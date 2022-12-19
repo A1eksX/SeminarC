@@ -6,3 +6,13 @@
 // 161 -> да
 
 
+Console.WriteLine("Введите число ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(Multiplicity(number) ? "Да" : "Нет");
+
+
+bool Multiplicity(int num, int num1 = 7, int num2 = 23)
+{
+    return num % num1 == 0 && num % num2 == 0;
+}

@@ -6,49 +6,17 @@
 // 34, 5 -> не кратно, остаток 4
 // 16, 4 -> кратно
 
-// Console.WriteLine("Введите первое целое число ");
-// int firstNumber = Convert.ToInt32(Console.ReadLine());
 
-// Console.WriteLine("Введите второе целое число ");
-// int secondNumber = Convert.ToInt32(Console.ReadLine());
-
-// int result = firstNumber % secondNumber;
-
-// if (result == 0) 
-// {
-//     Console.WriteLine("Кратно");
-// }
-// else 
-// {
-//     Console.WriteLine($"не кратно, остаток {result}");
-// }
-
-Console.WriteLine("Введите первое целое число ");
+Console.WriteLine("Введите два числа ");
 int firstNumber = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Введите второе целое число ");
 int secondNumber = Convert.ToInt32(Console.ReadLine());
 
-int res = Multiplicity(firstNumber, secondNumber);
-
-Console.WriteLine("Введите второе целое число ");
-
+Console.WriteLine(Multiplicity(firstNumber, secondNumber) == 0 ? "Кратно" : $"не кратно, остаток {Multiplicity(firstNumber, secondNumber)}");
 
 int Multiplicity(int first, int second)
 {
     return first % second;
 }
-
-
-
-int res = Multiplicity(numberOne, numberTwo);
-//Console.WriteLine(res == 0 ? "Кратно" : $"не кратно, остаток от деления {res}");
-//     Console.WriteLine("Кратно");
-// }
-// else
-// {
-//     Console.WriteLine($"Не кратно, остаток {div}");
-// }
 
 
 
