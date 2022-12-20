@@ -10,14 +10,14 @@
 Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number > 99) Console.WriteLine($"Третье число = {ThirdDigit(number)}");
+if (number > 99 || number < -99) Console.WriteLine("Третье число = " + ThirdDigit(number));
 else Console.WriteLine("Введено неверное число");
 
 int ThirdDigit(int num)
 {
-    while (num > 999)
+    while (num > 999 || num < -99)
     {
-        num = num / 10;
+        num = Math.Abs (num) / 10;
     }    
     return num = num % 10;
 }

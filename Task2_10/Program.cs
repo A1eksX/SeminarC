@@ -10,7 +10,7 @@ Console.WriteLine("Введите трёхзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 
-if (number > 99 && number < 999) Console.WriteLine($"Второе число равно {NumberTwo(number)}");
+if (number > 99 && number < 999 || number > -1000 && number < -99) Console.WriteLine($"Второе число равно {Math.Abs(NumberTwo(number))}");
 else Console.WriteLine("Вы ввели неверное число");
 
 
