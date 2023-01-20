@@ -24,7 +24,7 @@ int CountOddNumber(int[] array)             //считаем элементы м
     for (int i = 0; i < array.Length; i++)
     {
         if (i == 1 || i % 2 == 1) summ = summ + array[i];
-        Console.WriteLine(summ);
+   //     Console.WriteLine(summ);
     }
     return summ;
 }
@@ -47,3 +47,4 @@ int countNumber = CountOddNumber (Array);
 Console.Write($"Сумма нечётных чисел в массиве ");
 PrintArray(Array);
 Console.WriteLine($" равна {countNumber}");
+
