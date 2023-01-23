@@ -32,7 +32,7 @@ int ConvertDecimalToBinary(int num)
     {
         result = result + num % 2 * multiplyer;
         num = num / 2;
-        multiplyer *= 10;
+        multiplyer *= 10; 
     }
     return result;
 }
