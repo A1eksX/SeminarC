@@ -20,4 +20,19 @@ Console.WriteLine(res);
 
 // способ с int
 
-//Console.Write("Введите число для преобразования в двоичную систему счисления: ");int number = Convert.ToInt32(Console.ReadLine());int convertDecimalToBinary = ConvertDecimalToBinary(number);Console.WriteLine(convertDecimalToBinary);int ConvertDecimalToBinary(int num){    int result = 0;    int multiplyer = 1;    while (num != 0)    {        result = result + num % 2 * multiplyer;        num = num / 2;        multiplyer *= 10;    }    return result;}
+//Console.Write("Введите число для преобразования в двоичную систему счисления: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int convertDecimalToBinary = ConvertDecimalToBinary(number);
+Console.WriteLine(convertDecimalToBinary);
+int ConvertDecimalToBinary(int num)
+{
+    int result = 0;
+    int multiplyer = 1;
+    while (num != 0)
+    {
+        result = result + num % 2 * multiplyer;
+        num = num / 2;
+        multiplyer *= 10;
+    }
+    return result;
+}
