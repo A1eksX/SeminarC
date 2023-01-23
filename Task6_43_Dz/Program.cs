@@ -15,7 +15,8 @@ int k21 = Convert.ToInt32(Console.ReadLine());
 double intersectionPointX = intersectionX (k11, b11, k21, b21);
 double intersectionPointY = intersectionY (k11, b11);
 
-Console.Write($"Координаты точки пересечения прямых [{intersectionPointX}, {intersectionPointY}]");
+if (k11 != k21) Console.Write($"Координаты точки пересечения прямых [{intersectionPointX}, {intersectionPointY}]");
+else  Console.Write($"Прямые не пересекаются");
 
 double intersectionX (double k1, double b1, double k2, double b2)    //расчёт X
 {
