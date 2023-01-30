@@ -64,7 +64,7 @@ int SearchMinElement(int[] array)
         if (minElement > array[i])
         {
             minElement = array[i];
-            min = i+1;
+            min = i + 1;
         }
     }
     return min;
@@ -77,7 +77,7 @@ void PrintMatrix(int[,] matrix)
         Console.Write("[");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],5},");      
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],5},");
             else Console.Write($"{matrix[i, j],5}");
         }
         Console.WriteLine("]");
@@ -89,7 +89,7 @@ void PrintArray(int[] array)
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     {
-        if (i < array.Length - 1) Console.Write($"{array[i]}" + ", ");      
+        if (i < array.Length - 1) Console.Write($"{array[i]}" + ", ");
         else Console.Write($"{array[i]}");
     }
     Console.WriteLine("]");

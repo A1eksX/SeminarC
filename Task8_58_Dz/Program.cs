@@ -15,7 +15,6 @@ int columnsSecond = 2;
 int min = 1;
 int max = 10;
 
-
 int[,] array2DSecond = CreateMatrix(rowsSecond, columnsSecond, min, max);
 int[,] array2D = CreateMatrix(rows, columns, min, max);
 
