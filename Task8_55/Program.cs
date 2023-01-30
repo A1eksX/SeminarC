@@ -46,7 +46,6 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-
 int rows = 4;
 int columns = 4;
 if (rows == columns)

@@ -105,5 +105,3 @@ PrintArray(CheckMinIndex);
 int[,] CreateNewMatrix = NewMatrix(array2D, CheckMinIndex[0], CheckMinIndex[1]);
 Console.WriteLine(String.Empty);
 PrintMatrix(CreateNewMatrix);
-
-// к 56 задаче https://studwork.org/spravochnik/matematika/matricy/umnojenie-matric

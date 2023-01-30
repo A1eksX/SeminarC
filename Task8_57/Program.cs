@@ -3,7 +3,6 @@
 // информацию о том, сколько раз встречается элемент
 // входных данных.
 
-
 int matrixRows = 4;
 int matrixColumns = 4;
 int matrixMinValue = 1;
