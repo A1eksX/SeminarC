@@ -13,7 +13,6 @@
 int[,] createMatrix = CreateMatrix(6, 6, 1, 20);
 PrintMatrix(createMatrix);
 int[,] sortMatrix = SortMatrix(createMatrix);
-//SortMatrix (createMatrix);
 Console.WriteLine(string.Empty);
 PrintMatrix(sortMatrix);
 

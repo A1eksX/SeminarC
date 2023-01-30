@@ -15,17 +15,17 @@
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
 
-int[,] createMatrix = CreateMatrix(5, 7, 1, 10);
+int[,] createMatrix = CreateMatrix(5, 4, 1, 10);
 PrintMatrix(createMatrix);
 
 int[] minSummElementString = MinSummElementString(createMatrix);
 Console.WriteLine(String.Empty);
 PrintArray(minSummElementString);
 
-int checkMinElement = CheckMinElement(minSummElementString);
+int searchMinElement = SearchMinElement(minSummElementString);
 
 Console.WriteLine(String.Empty);
-Console.WriteLine($"Наименьшая сумма элементов в {checkMinElement} строке");
+Console.WriteLine($"Наименьшая сумма элементов на {searchMinElement} строке");
 
 
 int[,] CreateMatrix(int rows, int columns, int minValue, int maxValue)
@@ -55,7 +55,7 @@ int[] MinSummElementString(int[,] matrix)
     return minSummElementString;
 }
 
-int CheckMinElement(int[] array)
+int SearchMinElement(int[] array)
 {
     int minElement = array[0];
     int min = 0;
@@ -77,7 +77,7 @@ void PrintMatrix(int[,] matrix)
         Console.Write("[");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],5},");      // выводим на печать массив в виде [1, 2, 3, 8, 9] где скобки впереди и сзади, и нет в конце запятой
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],5},");      
             else Console.Write($"{matrix[i, j],5}");
         }
         Console.WriteLine("]");
@@ -89,7 +89,7 @@ void PrintArray(int[] array)
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     {
-        if (i < array.Length - 1) Console.Write($"{array[i]}" + ", ");      // выводим на печать массив в виде [1, 2, 3, 8, 9] где скобки впереди и сзади, и нет в конце запятой
+        if (i < array.Length - 1) Console.Write($"{array[i]}" + ", ");      
         else Console.Write($"{array[i]}");
     }
     Console.WriteLine("]");

@@ -20,23 +20,41 @@ int[,] Matrix2D(int rows, int colums, int min, int max)
     return matrix;
 }
 
+
 double[] ResultSummColumn(int[,] matrix) //
 {
     int size = matrix.GetLength(1);
     double[] arithmetic = new double[size];  //массив, среднеарифметического значения элементов в каждом столбце.
-    double[] summ = new double[matrix.GetLength(1)]; //масив, куда будет заноситься сумма элементов столбца
+    double summ = 0; //масив, куда будет заноситься сумма элементов столбца
 
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            summ[j] += matrix[i, j];
+            summ += matrix[i,j] / matrix.GetLength(0);
         }
-        arithmetic[j] = Math.Round(summ[j] / matrix.GetLength(0), 1);
+        arithmetic[j] = Math.Round(summ / matrix.GetLength(0)) ;
+        summ = 0;
     }
     return arithmetic;
 }
 
+// double[] ResultSummColumn(int[,] matrix) //
+// {
+//     int size = matrix.GetLength(1);
+//     double[] arithmetic = new double[size];  //массив, среднеарифметического значения элементов в каждом столбце.
+//     double[] summ = new double[matrix.GetLength(1)]; //масив, куда будет заноситься сумма элементов столбца
+
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             summ[j] += matrix[i, j];
+//         }
+//         arithmetic[j] = Math.Round(summ[j] / matrix.GetLength(0), 1);
+//     }
+//     return arithmetic;
+// }
 
 void PrintMatrix(int[,] matrixX)
 {
@@ -63,7 +81,7 @@ void PrintArray(double[] array)    // выводим на печать масс�
     Console.WriteLine("]");
 }
 
-int[,] Matrix = Matrix2D(3, 4, -10, 10);
+int[,] Matrix = Matrix2D(2, 2, -10, 10);
 double[] Result = ResultSummColumn(Matrix);
 PrintMatrix(Matrix);
 Console.WriteLine();
