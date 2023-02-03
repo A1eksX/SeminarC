@@ -20,7 +20,11 @@ int Akkerman(int num1, int num2)
 
     if (num1 > 0 && num2 == 0) return Akkerman(num1 - 1, 1);
 
-    if (num1 > 0 && num2 > 0) return Akkerman (num1 - 1, Akkerman (num1, num2 - 1));
+    return Akkerman (num1 - 1, Akkerman (num1, num2 - 1));
 
-    return Akkerman(num1, num2);
+  //  if (num1 > 0 && num2 > 0) return Akkerman (num1 - 1, Akkerman (num1, num2 - 1));
+
+  //  return Akkerman(num1, num2);
 }
+
+// По задаче 68 решение рабочее, но можно оптимизировать и улучшить вычислимость функции, если убрать последний return (всю строку), а в строке 23 убрать условие, оставить только возврат функции.
